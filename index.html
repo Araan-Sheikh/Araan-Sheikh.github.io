@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LavaHost - Your Reliable Hosting Partner</title>
+    <meta property="og:title" content="LavaHost by Lavadev">
+    <meta property="og:description" content="LavaHost, your reliable hosting partner created by Lava Development.">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1247719536296333364/1261663240182566962/Lavahost_-_prot_1_20240706200422.png?">
+    <meta property="og:url" content="https://lavahosts.com">
+    <meta property="og:type" content="website">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #ff5733;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            animation: headerFade 1s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            animation: headerBounce 1s ease-in-out infinite;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            animation: navSlide 1s ease-in-out;
+        }
+
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #ff5733;
+            color: #333;
+        }
+
+        /* Container Styles */
+        .container {
+            padding: 2rem;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            background: url('https://source.unsplash.com/1600x400/?server,cloud') no-repeat center center/cover;
+            color: #333;
+            animation: heroFade 1.5s ease-in-out;
+        }
+
+        .hero h2 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: heroScale 2s ease-in-out infinite;
+        }
+
+        .hero p {
+            color: #333;
+        }
+
+        /* Services Section Styles */
+        .services, .contact {
+            margin: 2rem 0;
+        }
+
+        .service-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            animation: serviceItemFade 1s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h3 {
+            margin-top: 0;
+        }
+
+        /* Contact Form Styles */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contact-form label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #contact-form button[type="submit"] {
+            background-color: #ff5733;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact-form button[type="submit"]:hover {
+            background-color: #e64d1f;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            animation: footerFade 1s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes headerFade {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes headerBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes navSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heroFade {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes heroScale {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes serviceItemFade {
+            0% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes footerFade {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LavaHost</h1>
+        <p>Your Reliable Hosting Partner</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#links">LavaHost</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h2>Fast, Reliable, Secure Hosting</h2>
+            <p>Experience the best hosting services with LavaHost.</p>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Shared Hosting</h3>
+                <p>Affordable and reliable shared hosting solutions for small businesses and personal websites.</p>
+            </div>
+            <div class="service-item">
+                <h3>VPS Hosting</h3>
+                <p>Scalable and powerful virtual private servers for growing businesses.</p>
+            </div>
+            <div class="service-item">
+                <h3>Dedicated Servers</h3>
+                <p>High-performance dedicated servers for small businesses and critical applications.</p>
+            </div>
+        </section>
+
+        <section id="links" class="contact">
+            <h2>Our Links</h2>
+            <p>Other stuff that uses LavaHosts.</p>
+            <p><a href="https://gobump.tech">gobump.tech</a></p>
+            <p><a href="https://discord.lavadev.net">discord.lavadev.net</a></p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 LavaHost. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const webhookUrl = process.env.WEBHOOK_URL;
+
+            const webhookBody = {
+                embeds: [
+                    {
+                        title: 'New Message',
+                        fields: [
+                            {
+                                name: 'Name',
+                                value: name
+                            },
+                            {
+                                name: 'Email',
+                                value: email
+                            },
+                            {
+                                name: 'Message',
+                                value: message
+                            }
+                        ],
+                        color: 0x00ff00 // Green color
+                    }
+                ]
+            };
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(webhookBody),
+                });
+
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    form.reset();
+                } else {
+                    alert('Error sending message. Please try again later.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            }
+        });
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/667519e0eaf3bd8d4d12dec9/1i0smq5j7';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
